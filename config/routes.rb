@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
 
-  root 'person#new'
 
-  
+
+  get "/persons/new" , to: "person#new"
+  post "/persons/create", to: "person#create"
+  get "/persons", to: "person#index"
 
 
   resources :movies
